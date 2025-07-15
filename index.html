@@ -2,9 +2,7 @@
 <html>
   <head>
     <title>Otagawa AR</title>
-    <!-- A-Frame -->
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-    <!-- AR.js (CDN 最新) -->
     <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <style>
@@ -17,15 +15,13 @@
         <a-asset-item id="model" src="otagawa.glb"></a-asset-item>
       </a-assets>
 
-      <!-- モデル表示 -->
-     <a-entity 
-  gltf-model="#model"
-  position="0 0 -2"
-  scale="10 10 10"
-  rotation="0 0 0">
-</a-entity>
+      <a-entity 
+        gltf-model="#model"
+        position="20 -13 3.5"
+        scale="0.02 0.02 0.02"
+        rotation="0 180 0">
+      </a-entity>
 
-      <!-- 環境光 -->
       <a-entity light="type: ambient; intensity: 1"></a-entity>
       <a-camera-static></a-camera-static>
     </a-scene>
