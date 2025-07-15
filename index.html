@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Otagawa AR</title>
+    <title>Otagawa AR - Debug Version</title>
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-    <script src="https://rawgit.com/jeromeetienne/ar.js/2.4.1/aframe/build/aframe-ar.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/ar.js/2.4.1/aframe/build/aframe-ar.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <style> body { margin: 0; overflow: hidden; } </style>
   </head>
@@ -14,16 +14,15 @@
       vr-mode-ui="enabled: false"
       renderer="logarithmicDepthBuffer: true;"
     >
-      <!-- モデル読み込み -->
       <a-assets>
         <a-asset-item id="model" src="otagawa.glb"></a-asset-item>
       </a-assets>
 
-      <!-- モデル表示位置・拡大調整済み -->
+      <!-- ★ 大きくして視界の中心に強制表示 -->
       <a-entity
         gltf-model="#model"
-        position="0 -1.5 -2"
-        scale="2 2 2"
+        position="0 0 -2"
+        scale="5 5 5"
         rotation="0 180 0"
       ></a-entity>
 
