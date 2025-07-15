@@ -2,9 +2,9 @@
 <html>
   <head>
     <title>Otagawa AR</title>
-    <!-- A-Frame本体 -->
+    <!-- A-Frame -->
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-    <!-- AR.js最新版CDN -->
+    <!-- AR.js (CDN 最新) -->
     <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <style>
@@ -14,7 +14,7 @@
   <body>
     <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
       <a-assets>
-        <a-asset-item id="model" src="349273c2-671f-4cda-9794-26cfc721822c.glb"></a-asset-item>
+        <a-asset-item id="model" src="otagawa.glb"></a-asset-item>
       </a-assets>
 
       <!-- モデル表示 -->
@@ -25,10 +25,8 @@
         rotation="0 180 0">
       </a-entity>
 
-      <!-- 光源 -->
+      <!-- 環境光 -->
       <a-entity light="type: ambient; intensity: 1"></a-entity>
-
-      <!-- カメラ -->
       <a-camera-static></a-camera-static>
     </a-scene>
   </body>
