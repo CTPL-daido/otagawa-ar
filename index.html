@@ -1,37 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Otagawa AR - Debug Version</title>
+    <title>Otagawa AR</title>
+    <!-- A-Frame本体 -->
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-    <!-- 正しいAR.js CDNを使用 -->
-    <script src="https://cdn.jsdelivr.net/npm/ar.js@3.4.2/aframe/build/aframe-ar.min.js"></script>
+    <!-- AR.js最新版CDN -->
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <style> body { margin: 0; overflow: hidden; } </style>
+    <style>
+      body { margin: 0; overflow: hidden; }
+    </style>
   </head>
   <body>
-    <a-scene
-      embedded
-      arjs="sourceType: webcam; debugUIEnabled: false;"
-      vr-mode-ui="enabled: false"
-      renderer="logarithmicDepthBuffer: true;"
-    >
+    <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
       <a-assets>
-        <a-asset-item id="model" src="otagawa.glb"></a-asset-item>
+        <a-asset-item id="model" src="349273c2-671f-4cda-9794-26cfc721822c.glb"></a-asset-item>
       </a-assets>
 
-      <!-- モデル本体 -->
-      <a-entity
+      <!-- モデル表示 -->
+      <a-entity 
         gltf-model="#model"
         position="0 0 -2"
-        scale="1 1 1"
-        rotation="0 180 0"
-      ></a-entity>
+        scale="2 2 2"
+        rotation="0 180 0">
+      </a-entity>
 
-      <!-- 照明 -->
-      <a-light type="ambient" intensity="1"></a-light>
+      <!-- 光源 -->
+      <a-entity light="type: ambient; intensity: 1"></a-entity>
 
       <!-- カメラ -->
-      <a-camera position="0 1.6 0"></a-camera>
+      <a-camera-static></a-camera-static>
     </a-scene>
   </body>
 </html>
