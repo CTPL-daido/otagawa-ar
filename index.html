@@ -20,11 +20,13 @@
       device-orientation-permission-ui="enabled: true"
       id="ar-container"
     >
-      <!-- ✅ 明るくするためのライト -->
-      <a-entity light="type: ambient; color: #ffffff; intensity: 1.2"></a-entity>
-      <a-entity light="type: directional; color: #ffffff; intensity: 0.8" position="1 2 1"></a-entity>
 
-      <!-- ✅ otagawa.glbの表示 -->
+      <!-- ✅ 明るさアップ：複数ライト -->
+      <a-entity light="type: ambient; color: #ffffff; intensity: 2.0"></a-entity>
+      <a-entity light="type: directional; color: #ffffff; intensity: 1.0" position="-2 3 -1"></a-entity>
+      <a-entity light="type: directional; color: #ffffff; intensity: 0.6" position="2 2 1"></a-entity>
+
+      <!-- ✅ 3Dモデルの表示 -->
       <a-entity 
         gltf-model="otagawa.glb"
         position="0 0 0"
@@ -32,8 +34,9 @@
         rotation="0 0 0"
       ></a-entity>
 
-      <!-- ✅ カメラ（位置固定AR用） -->
+      <!-- ✅ スマホAR用カメラ -->
       <a-camera gps-camera rotation-reader></a-camera>
+
     </a-scene>
   </body>
 </html>
