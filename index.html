@@ -6,36 +6,25 @@
     <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-      body { margin: 0; overflow: hidden; font-family: sans-serif; }
-      #overlay {
-        position: absolute;
-        top: 10px;
-        width: 100%;
-        text-align: center;
-        z-index: 1;
-        color: white;
-        text-shadow: 1px 1px 2px black;
-        font-size: 18px;
-        background: rgba(0,0,0,0.4);
-        padding: 8px 0;
-      }
+      body { margin: 0; overflow: hidden; }
     </style>
   </head>
 
   <body>
-    <!-- 日本語説明 -->
-    <div id="overlay">カメラをマーカー（黒い枠）に向けてください</div>
-
     <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
       
-      <!-- 環境光 -->
+      <!-- 環境光（全体を明るく） -->
       <a-entity light="type: ambient; color: #ffffff; intensity: 1.5"></a-entity>
 
-      <!-- 平行光 -->
-      <a-entity light="type: directional; color: #ffffff; intensity: 2" position="2 4 3"></a-entity>
-      <a-entity light="type: directional; color: #ffffff; intensity: 1" position="-2 3 -4"></a-entity>
+      <!-- 平行光1（前から照らす） -->
+      <a-entity light="type: directional; color: #ffffff; intensity: 2"
+                position="2 4 3"></a-entity>
 
-      <!-- モデル -->
+      <!-- 平行光2（後ろから補助） -->
+      <a-entity light="type: directional; color: #ffffff; intensity: 1"
+                position="-2 3 -4"></a-entity>
+
+      <!-- モデルの読み込み -->
       <a-entity 
         gltf-model="otagawa.glb"
         scale="0.05 0.05 0.05"
