@@ -21,15 +21,15 @@
       id="ar-container"
     >
 
-      <!-- 明るさ調整済みGLBモデルの読み込み -->
+      <!-- モデルをARカメラの前に出して大きめに表示 -->
       <a-entity 
         gltf-model="otagawa.glb"
-        position="0 0 0"
-        scale="1 1 1"
+        position="0 0 -5"
+        scale="10 10 10"
         rotation="0 0 0"
       ></a-entity>
 
-      <!-- カメラ（GPS + ジャイロ用） -->
+      <!-- カメラ -->
       <a-camera gps-camera rotation-reader></a-camera>
       
     </a-scene>
