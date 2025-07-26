@@ -21,15 +21,15 @@
       id="ar-container"
     >
 
-      <!-- GLBモデルの読み込み -->
+      <!-- 明るさ調整済みGLBモデルの読み込み -->
       <a-entity 
-        gltf-model="otagawa.glb"
+        gltf-model="otagawa_emission.glb"
         position="0 0 0"
         scale="1 1 1"
         rotation="0 0 0"
       ></a-entity>
 
-      <!-- カメラ（AR.jsマーカー不要タイプ） -->
+      <!-- カメラ（GPS + ジャイロ用） -->
       <a-camera gps-camera rotation-reader></a-camera>
       
     </a-scene>
